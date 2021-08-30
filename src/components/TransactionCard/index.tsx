@@ -1,4 +1,5 @@
 import React from 'react';
+import { ITransactionCard } from '../../models/ITransactionCard';
 
 import { 
     Container,
@@ -11,26 +12,28 @@ import {
     Date,
 } from './styles';
 
-export const TransactionCard: React.FC = () => {
+export const TransactionCard: React.FC<ITransactionCard> = ({ data }) => {
   return (
       <Container>
           <Title>
-              Desenvolvimento de site
+              {data.title}
           </Title>
 
-          <Amount>
-              R$ 12.000,00
+          <Amount type={data.type}>
+              {data.type === 'negative' && '- '}
+              {data.amount}
           </Amount>
 
           <Footer>
               <Category>
-                  <Icon name="dollar-sign" />
+                  <Icon name={data.category.icon} />
                   <CategoryName>
-                      Vendas
+                      {data.category.name}
                   </CategoryName>
               </Category>
+
               <Date>
-                  13/04/2020
+                  {data.date}
               </Date>
           </Footer>
       </Container>
