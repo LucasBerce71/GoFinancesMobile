@@ -15,6 +15,7 @@ import {
 import { Register } from './src/screens/Register';
 
 import theme from './src/global/styles/theme';
+import { CategorySelect } from './src/screens/CategorySelect';
 
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({

@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components/native';
 import { RFValue } from 'react-native-responsive-fontsize';
 
 import { Feather } from '@expo/vector-icons';
+
 import { IStyledType } from '../../models/IStyledType';
 
 export const Container = styled.View<IStyledType>`

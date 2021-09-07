@@ -1,11 +1,10 @@
 import React from 'react';
-import { TextInputProps } from 'react-native';
+
+import { TInput } from '../../../models/types/TInput';
 
 import { Container } from './styles';
 
-type TProps = TextInputProps;
-
-export const Input: React.FC<TProps> = ({ ...rest }) => {
+export const Input: React.FC<TInput> = ({ ...rest }) => {
     return (
         <Container {...rest} />
     );

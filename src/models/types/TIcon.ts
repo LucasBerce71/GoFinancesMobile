@@ -1,0 +1,1 @@
+export type TIcon = { type: 'up' | 'down' };
