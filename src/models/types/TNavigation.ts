@@ -1,0 +1,1 @@
+export type TNavigationProps = { navigate: (screen: string) => void };
